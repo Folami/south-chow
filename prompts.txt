@@ -1,0 +1,20 @@
+Add a contact form section to the landing page
+
+Create a "Featured Products" carousel section
+
+Add a "Customer Reviews" section with testimonials
+
+Add a "Services" dropdown to the navbar
+
+Add a "Gallery" section to showcase food images
+
+Make the dropdown menu work on click for mobile devices
+
+
+Add a smooth scrolling effect to the anchor links
+
+Add a dark mode toggle to the navbar
+
+Add a background image to the Testimonials section
+
+Add a "Contact Us" button to the Testimonials section
