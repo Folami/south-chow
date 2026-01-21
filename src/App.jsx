@@ -15,6 +15,7 @@ import FeaturedProducts from './FeaturedProducts'
 import Testimonials from './Testimonials'
 import BookingModal from './BookingModal'
 import TermsModal from './TermsModal'
+import Gallery from './Gallery'
 import logoImg from './assets/south-chow-img.png'
 import chefPeeImg from './assets/chef-pee-img.jpg'
 
@@ -92,6 +93,9 @@ function App() {
           </a>
           <a href="#reviews" onClick={() => setIsMenuOpen(false)}>
             Reviews
+          </a>
+          <a href="#gallery" onClick={() => setIsMenuOpen(false)}>
+            Gallery
           </a>
           <a href="#contact" onClick={() => setIsMenuOpen(false)}>
             Contact
@@ -228,7 +232,15 @@ function App() {
         </div>
       </section>
 
-      <section id="contact" className="sc-section sc-dark">
+      <section id="gallery" className="sc-section sc-dark">
+        <div className="sc-content-wrapper">
+          <h2>Gallery</h2>
+          <p className="sc-subtitle">CULINARY MASTERPIECES</p>
+          <Gallery />
+        </div>
+      </section>
+
+      <section id="contact" className="sc-section sc-light">
         <div className="sc-content-wrapper">
           <h2>Contact Us</h2>
           <p className="sc-subtitle">GET IN TOUCH</p>

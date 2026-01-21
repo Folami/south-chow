@@ -2,12 +2,12 @@ import React from 'react'
 
 const Gallery = () => {
   const images = [
-    'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1563342192-513194147873?auto=format&fit=crop&w=800&q=80', // Jollof
+    'https://images.unsplash.com/photo-1625944230942-905dc6f659c6?auto=format&fit=crop&w=800&q=80', // Suya
+    'https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80', // Efo Riro
+    'https://images.unsplash.com/photo-1604329263239-aa8ce2742086?auto=format&fit=crop&w=800&q=80', // Porridge
+    'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80', // Salad/Greens
+    'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80', // Feast
   ]
 
   return (

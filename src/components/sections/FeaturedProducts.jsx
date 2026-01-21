@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
-import MealCard from './MealCard'
+import MealCard from '../ui/MealCard'
 
 // Import slick-carousel styles
 import 'slick-carousel/slick/slick.css'
