@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
+import BackToTop from './components/ui/BackToTop/BackToTop'
 
 // Styles
 import './styles/global.css'
@@ -28,32 +29,11 @@ import logoImg from './assets/south-chow-img.png'
 import chefPeeImg from './assets/chef-pee-img.jpg'
 
 function App() {
-  const [showBackToTop, setShowBackToTop] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false)
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false)
   const [cartItems, setCartItems] = useState([])
   const [isCartOpen, setIsCartOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowBackToTop(true)
-      } else {
-        setShowBackToTop(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
 
   const addToCart = (product) => {
     setCartItems((prevItems) => {
@@ -150,11 +130,7 @@ function App() {
 
       <Footer />
 
-      {showBackToTop && (
-        <button className="sc-back-to-top" onClick={scrollToTop}>
-          &#8679;
-        </button>
-      )}
+      <BackToTop />
 
       <button className="sc-cart-btn" onClick={() => setIsCartOpen(true)}>
         <FaShoppingCart />

@@ -1,4 +1,6 @@
+import React from 'react'
 import Slider from 'react-slick'
+import './Hero.css'
 
 // Import slick-carousel styles
 import 'slick-carousel/slick/slick.css'
