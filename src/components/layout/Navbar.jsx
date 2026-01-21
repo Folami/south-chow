@@ -38,6 +38,9 @@ const Navbar = ({ logoImg, isMenuOpen, setIsMenuOpen }) => {
         <a href="#reviews" onClick={() => setIsMenuOpen(false)}>
           Reviews
         </a>
+        <a href="#gallery" onClick={() => setIsMenuOpen(false)}>
+          Gallery
+        </a>
         <a href="#contact" onClick={() => setIsMenuOpen(false)}>
           Contact
         </a>
