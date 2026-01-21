@@ -6,7 +6,7 @@ import MealCard from './MealCard'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({ addToCart }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -40,21 +40,25 @@ const FeaturedProducts = () => {
       imageClass: 'sc-img-featured-1',
       title: 'Jollof Rice Feast',
       description: 'Smoky party jollof rice with grilled chicken.',
+      price: 25.0,
     },
     {
       imageClass: 'sc-img-featured-2',
       title: 'Asaro (Yam Porridge)',
       description: 'Creamy yam porridge with assorted meats.',
+      price: 20.0,
     },
     {
       imageClass: 'sc-img-featured-3',
       title: 'Efo Riro',
       description: 'Rich vegetable soup with a blend of spices.',
+      price: 22.5,
     },
     {
       imageClass: 'sc-img-featured-4',
       title: 'Suya Skewers',
       description: 'Spicy grilled beef skewers, a northern delicacy.',
+      price: 15.0,
     },
   ]
 
@@ -63,7 +67,11 @@ const FeaturedProducts = () => {
       <Slider {...settings}>
         {products.map((product, index) => (
           <div key={index} className="sc-carousel-slide">
-            <MealCard {...product} />
+            <MealCard
+              {...product}
+              onAddToCart={() => addToCart(product)}
+              price={product.price}
+            />
           </div>
         ))}
       </Slider>

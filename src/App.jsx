@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { FaShoppingCart } from 'react-icons/fa'
 
 // Styles
 import './styles/LandingPage.css'
@@ -20,6 +21,7 @@ import Contact from './components/sections/Contact'
 // Modal Components
 import BookingModal from './components/modals/BookingModal'
 import TermsModal from './components/modals/TermsModal'
+import CartModal from './CartModal'
 
 // Assets
 import logoImg from './assets/south-chow-img.png'
@@ -30,6 +32,8 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false)
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false)
+  const [cartItems, setCartItems] = useState([])
+  const [isCartOpen, setIsCartOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +53,16 @@ function App() {
       top: 0,
       behavior: 'smooth',
     })
+  }
+
+  const addToCart = (product) => {
+    setCartItems([...cartItems, product])
+    setIsCartOpen(true)
+  }
+
+  const removeFromCart = (index) => {
+    const newCart = cartItems.filter((_, i) => i !== index)
+    setCartItems(newCart)
   }
 
   const heroSettings = {
@@ -75,13 +89,13 @@ function App() {
 
       <About chefPeeImg={chefPeeImg} />
 
-      <PackagedMeals />
+      <PackagedMeals addToCart={addToCart} />
 
       <section id="featured" className="sc-section sc-light">
         <div className="sc-content-wrapper">
           <h2>Featured Products</h2>
           <p className="sc-subtitle">CUSTOMER FAVORITES</p>
-          <FeaturedProducts />
+          <FeaturedProducts addToCart={addToCart} />
         </div>
       </section>
 
@@ -116,6 +130,13 @@ function App() {
         </button>
       )}
 
+      <button className="sc-cart-btn" onClick={() => setIsCartOpen(true)}>
+        <FaShoppingCart />
+        {cartItems.length > 0 && (
+          <span className="sc-cart-count">{cartItems.length}</span>
+        )}
+      </button>
+
       <BookingModal
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
@@ -123,6 +144,12 @@ function App() {
       <TermsModal
         isOpen={isTermsModalOpen}
         onClose={() => setIsTermsModalOpen(false)}
+      />
+      <CartModal
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        removeFromCart={removeFromCart}
       />
     </div>
   )

@@ -329,6 +329,20 @@ button,
   text-transform: uppercase;
 }
 
+.sc-price {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sc-add-cart-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.8rem;
+}
+
 /* Popular Badge */
 .sc-badge-popular {
   position: absolute;
@@ -636,6 +650,95 @@ button,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 2000;
   padding: 0; /* Override default button padding */
+}
+
+/* Floating Cart Button */
+.sc-cart-btn {
+  position: fixed;
+  bottom: 6rem; /* Above back to top button */
+  right: 2rem;
+  background-color: #fff;
+  color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2000;
+  padding: 0;
+  border: 2px solid var(--accent-color);
+}
+
+.sc-cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: 0.7rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Cart Modal */
+.sc-cart-modal {
+  text-align: left;
+}
+
+.sc-cart-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sc-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.sc-cart-item-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.sc-cart-item-info span {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.sc-cart-remove-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sc-cart-remove-btn:hover {
+  color: red;
+}
+
+.sc-cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.sc-checkout-btn {
+  padding: 0.75rem 1.5rem;
 }
 
 /* Responsive */
