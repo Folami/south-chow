@@ -100,4 +100,75 @@
       0 0 5px var(--accent-color),
       0 0 10px var(--accent-color);
   }
+
+  .sc-text-south {
+    font-size: 2rem !important;
+  }
+
+  .sc-text-chow {
+    font-size: 2.5rem !important;
+    margin-left: 0.5rem !important;
+  }
+
+  .sc-text-by {
+    font-size: 1rem !important;
+  }
+
+  .sc-text-ace {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Hero Brand Styles */
+.sc-hero-brand-container {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc-brand-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 1;
+}
+
+.sc-text-south {
+  font-family: 'Lato', 'Montserrat', sans-serif;
+  font-weight: 300; /* Light */
+  color: #ff0000;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sc-text-chow {
+  font-family: 'Brush Script MT', 'Mistral', cursive;
+  color: #ff0000;
+  font-size: 4.5rem;
+  margin-left: 1rem;
+}
+
+.sc-brand-sub {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.sc-text-by {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: #ff0000;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.sc-text-ace {
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  color: #ffff00;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
