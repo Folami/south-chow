@@ -67,6 +67,11 @@ const FeaturedProducts = () => {
           </div>
         ))}
       </Slider>
+      <div className="sc-view-all-container">
+        <a href="#packaged" className="btn-primary">
+          View All Products
+        </a>
+      </div>
     </div>
   )
 }
