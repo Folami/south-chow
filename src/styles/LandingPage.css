@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
   --primary-color: #1a1a1a;
   --accent-color: #c5a059; /* Gold-ish accent similar to high-end dining sites */
   --text-light: #f4f4f4;
   --text-dark: #333333;
-  --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-body: 'Georgia', serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
 }
 
 * {
@@ -22,6 +24,7 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   background-color: #fff;
+  letter-spacing: 0.2px;
 }
 
 .sc-container {
@@ -58,7 +61,7 @@ body {
   font-family: var(--font-heading);
   font-size: 0.9rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
   transition: color 0.3s;
 }
 
@@ -95,7 +98,7 @@ body {
   cursor: pointer;
   font-family: var(--font-heading);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
   transition: color 0.3s;
 }
 
@@ -173,7 +176,7 @@ body {
 }
 
 .sc-hero-overlay h1 {
-  font-family: var(--font-heading);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Keep original as requested */
   font-size: 3.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -189,6 +192,7 @@ body {
 }
 
 .sc-hero-overlay p {
+  font-family: 'Georgia', serif; /* Keep original as requested */
   font-size: 1.2rem;
   margin-bottom: 2rem;
   font-style: italic;
@@ -281,7 +285,8 @@ button,
   font-size: 2.5rem;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.6px;
+  font-weight: 700;
 }
 
 .sc-subtitle {
@@ -333,6 +338,8 @@ button,
   font-family: var(--font-heading);
   margin-bottom: 1rem;
   text-transform: uppercase;
+  letter-spacing: 0.2px;
+  font-weight: 700;
 }
 
 /* Popular Badge */
@@ -476,6 +483,7 @@ button,
   font-size: 0.9rem;
   opacity: 0.7;
   font-family: var(--font-heading);
+  letter-spacing: 0.2px;
 }
 
 /* Gallery */
@@ -629,7 +637,7 @@ button,
     font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.6px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     padding: 1.25rem 0;
@@ -654,7 +662,7 @@ button,
     font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.6px;
     width: 100%;
     padding: 1.25rem 0;
     text-align: left;
