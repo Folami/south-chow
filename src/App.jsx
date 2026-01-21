@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import './LandingPage.css'
 import MealCard from './MealCard'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaBars,
+  FaTimes,
+} from 'react-icons/fa'
 import FeaturedProducts from './FeaturedProducts'
 import Testimonials from './Testimonials'
 import logoImg from './assets/south-chow-img.png'
@@ -9,6 +15,7 @@ import chefPeeImg from './assets/chef-pee-img.jpg'
 
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,14 +41,42 @@ function App() {
     <div className="sc-container">
       <nav className="sc-navbar">
         <img src={logoImg} alt="South Chow Logo" className="sc-logo" />
-        <div className="sc-nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#packaged">Packaged Meals</a>
-          <a href="#featured">Featured</a>
-          <a href="#chef">Rent a Chef</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#contact">Contact</a>
+        <div
+          className="sc-mobile-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+        <div className={`sc-nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <a href="#home" onClick={() => setIsMenuOpen(false)}>
+            Home
+          </a>
+          <a href="#about" onClick={() => setIsMenuOpen(false)}>
+            About
+          </a>
+          <div className="sc-dropdown">
+            <button className="sc-dropbtn">Services ▾</button>
+            <div className="sc-dropdown-content">
+              <a href="#chef" onClick={() => setIsMenuOpen(false)}>
+                Rent-A-Chef
+              </a>
+              <a href="#chef" onClick={() => setIsMenuOpen(false)}>
+                Order a La Carte
+              </a>
+              <a href="#packaged" onClick={() => setIsMenuOpen(false)}>
+                Order Packaged Meals
+              </a>
+            </div>
+          </div>
+          <a href="#featured" onClick={() => setIsMenuOpen(false)}>
+            Featured
+          </a>
+          <a href="#reviews" onClick={() => setIsMenuOpen(false)}>
+            Reviews
+          </a>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            Contact
+          </a>
         </div>
       </nav>
 
@@ -51,7 +86,7 @@ function App() {
           <p>Experience restaurant quality in the comfort of your home.</p>
           <div className="sc-hero-btns">
             <button className="btn-primary">Order Meals</button>
-            <button className="btn-secondary">Book ChefPee</button>
+            <button className="btn-secondary">Book Chef Pee</button>
           </div>
         </div>
       </section>
