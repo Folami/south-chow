@@ -30,6 +30,10 @@ const BookingModal = ({ isOpen, onClose }) => {
             <input type="date" required />
           </div>
           <div className="sc-form-group">
+            <label>Time of Event</label>
+            <input type="time" required />
+          </div>
+          <div className="sc-form-group">
             <label>Number of Guests</label>
             <input type="number" min="1" required />
           </div>
