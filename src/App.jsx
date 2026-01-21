@@ -5,6 +5,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import FeaturedProducts from './FeaturedProducts'
 import Testimonials from './Testimonials'
 import logoImg from './assets/south-chow-img.png'
+import chefPeeImg from './assets/chef-pee-img.jpg'
 
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false)
@@ -35,6 +36,7 @@ function App() {
         <img src={logoImg} alt="South Chow Logo" className="sc-logo" />
         <div className="sc-nav-links">
           <a href="#home">Home</a>
+          <a href="#about">About</a>
           <a href="#packaged">Packaged Meals</a>
           <a href="#featured">Featured</a>
           <a href="#chef">Rent a Chef</a>
@@ -49,12 +51,36 @@ function App() {
           <p>Experience restaurant quality in the comfort of your home.</p>
           <div className="sc-hero-btns">
             <button className="btn-primary">Order Meals</button>
-            <button className="btn-secondary">Book a Chef</button>
+            <button className="btn-secondary">Book ChefPee</button>
           </div>
         </div>
       </section>
 
-      <section id="packaged" className="sc-section sc-light">
+      <section id="about" className="sc-section sc-light">
+        <div className="sc-content-wrapper">
+          <h2>Meet Chef Sonia</h2>
+          <p className="sc-subtitle">EXECUTIVE CHEF & CREATIVE DIRECTOR</p>
+          <div className="sc-split-layout">
+            <div
+              className="sc-image-block"
+              style={{ backgroundImage: `url(${chefPeeImg})` }}
+            ></div>
+            <div className="sc-text-block">
+              <p>
+                A vision of multi-talented excellence, Chef Sonia Praise
+                Ben-Woko transitions seamlessly from the global stage as Miss
+                Ideal Nigeria 2019 to the culinary arts. With a profound passion
+                for orchestrating savoury delights, she infuses every dish with
+                the same elegance and creativity that defined her modeling
+                career, delivering a dining experience that is both
+                sophisticated and soul-satisfying.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="packaged" className="sc-section sc-dark">
         <div className="sc-content-wrapper">
           <h2>Packaged Meals</h2>
           <p className="sc-subtitle">COOKED & UNCOOKED DELICACIES</p>
@@ -74,7 +100,7 @@ function App() {
         </div>
       </section>
 
-      <section id="featured" className="sc-section sc-dark">
+      <section id="featured" className="sc-section sc-light">
         <div className="sc-content-wrapper">
           <h2>Featured Products</h2>
           <p className="sc-subtitle">CUSTOMER FAVORITES</p>
@@ -82,7 +108,7 @@ function App() {
         </div>
       </section>
 
-      <section id="chef" className="sc-section sc-light">
+      <section id="chef" className="sc-section sc-dark">
         <div className="sc-content-wrapper">
           <h2>Rent a Chef</h2>
           <p className="sc-subtitle">A LA CARTE HOME DINING</p>
@@ -100,7 +126,7 @@ function App() {
         </div>
       </section>
 
-      <section id="reviews" className="sc-section sc-dark">
+      <section id="reviews" className="sc-section sc-light">
         <div className="sc-content-wrapper">
           <h2>Customer Reviews</h2>
           <p className="sc-subtitle">WHAT PEOPLE ARE SAYING</p>
@@ -108,7 +134,7 @@ function App() {
         </div>
       </section>
 
-      <section id="contact" className="sc-section sc-light">
+      <section id="contact" className="sc-section sc-dark">
         <div className="sc-content-wrapper">
           <h2>Contact Us</h2>
           <p className="sc-subtitle">GET IN TOUCH</p>

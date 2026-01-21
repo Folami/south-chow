@@ -263,6 +263,10 @@ button,
   background-position: center;
 }
 
+.sc-about-img {
+  background-image: url('https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+}
+
 /* Featured Products Carousel */
 .sc-featured-products .slick-slide {
   padding: 0 1rem; /* Add spacing between slides */
