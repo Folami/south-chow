@@ -4,7 +4,7 @@ const About = ({ chefPeeImg }) => {
   return (
     <section id="about" className="sc-section sc-light">
       <div className="sc-content-wrapper">
-        <h2>Meet Chef Sonia</h2>
+        <h2>Meet Chef Pee</h2>
         <p className="sc-subtitle">EXECUTIVE CHEF & CREATIVE DIRECTOR</p>
         <div className="sc-split-layout">
           <div

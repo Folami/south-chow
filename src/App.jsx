@@ -65,6 +65,10 @@ function App() {
     setCartItems(newCart)
   }
 
+  const clearCart = () => {
+    setCartItems([])
+  }
+
   const heroSettings = {
     dots: true,
     infinite: true,
@@ -150,6 +154,7 @@ function App() {
         onClose={() => setIsCartOpen(false)}
         cartItems={cartItems}
         removeFromCart={removeFromCart}
+        clearCart={clearCart}
       />
     </div>
   )
