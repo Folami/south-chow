@@ -25,7 +25,7 @@ const Hero = ({ heroSettings }) => {
             <h1>CULINARY EXCELLENCE</h1>
             <p>Experience restaurant quality in the comfort of your home.</p>
             <div className="sc-hero-btns">
-              <a href="#chef" className="btn-secondary">
+              <a href="#chef" className="btn-primary">
                 Book Chef Pee
               </a>
             </div>
