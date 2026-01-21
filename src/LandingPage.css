@@ -471,6 +471,32 @@ button,
   font-family: var(--font-heading);
 }
 
+/* Gallery */
+.sc-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.sc-gallery-item {
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sc-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sc-gallery-item:hover img {
+  transform: scale(1.1);
+}
+
 /* Contact Form */
 .sc-contact-form {
   max-width: 600px;
