@@ -6,7 +6,7 @@ const Navbar = ({ logoImg, isMenuOpen, setIsMenuOpen }) => {
     <nav className="sc-navbar">
       <img src={logoImg} alt="South Chow Logo" className="sc-logo" />
       <div
-        className="sc-mobile-toggle"
+        className={`sc-mobile-toggle ${isMenuOpen ? 'active' : ''}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         {isMenuOpen ? <FaTimes /> : <FaBars />}

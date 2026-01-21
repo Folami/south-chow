@@ -71,6 +71,12 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--primary-color);
+  z-index: 2002; /* Stay on top of the overlay */
+  transition: color 0.3s;
+}
+
+.sc-mobile-toggle.active {
+  color: #fff;
 }
 
 /* Dropdown Menu */
@@ -594,38 +600,64 @@ button,
   }
 
   .sc-nav-links {
-    display: none;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     width: 100%;
+    height: 100vh;
     flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 100%;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
     left: 0;
-    background-color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    border-top: 1px solid #f4f4f4;
+    background-color: #000;
+    padding: 100px 10% 40px;
+    z-index: 2001;
+    overflow-y: auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .sc-nav-links.active {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
   }
 
   .sc-nav-links a {
-    margin: 0.75rem 0;
-    margin-left: 0;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
-    text-align: center;
-  }
-
-  .sc-dropdown {
-    margin: 0.75rem 0;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .sc-dropdown {
+    padding: 1.25rem 0;
     margin: 0;
+    text-align: left;
+    transition: color 0.3s;
+  }
+
+  .sc-nav-links a:hover {
+    color: var(--accent-color);
+  }
+
+  .sc-dropdown {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .sc-dropbtn {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 1.25rem 0;
+    text-align: left;
   }
 
   .sc-dropdown-content {
@@ -633,9 +665,21 @@ button,
     transform: none;
     box-shadow: none;
     border-top: none;
-    background-color: #f9f9f9;
+    background-color: transparent;
     width: 100%;
-    padding: 0;
+    padding: 0 0 1rem 1rem;
+    display: none;
+  }
+
+  .sc-dropdown:hover .sc-dropdown-content {
+    display: block;
+  }
+
+  .sc-dropdown-content a {
+    border-bottom: none;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .sc-hero-overlay h1 {
