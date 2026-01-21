@@ -41,6 +41,10 @@ const BookingModal = ({ isOpen, onClose }) => {
             <label>Special Requests</label>
             <textarea rows="4"></textarea>
           </div>
+          <div className="sc-form-checkbox">
+            <input type="checkbox" id="terms" required />
+            <label htmlFor="terms">I agree to the Terms & Conditions</label>
+          </div>
           <button type="submit" className="btn-primary">
             Submit Request
           </button>

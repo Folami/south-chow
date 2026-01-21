@@ -14,6 +14,7 @@ import {
 import FeaturedProducts from './FeaturedProducts'
 import Testimonials from './Testimonials'
 import BookingModal from './BookingModal'
+import TermsModal from './TermsModal'
 import logoImg from './assets/south-chow-img.png'
 import chefPeeImg from './assets/chef-pee-img.jpg'
 
@@ -21,6 +22,7 @@ function App() {
   const [showBackToTop, setShowBackToTop] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false)
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -204,6 +206,14 @@ function App() {
               >
                 Book Now
               </button>
+              <div className="sc-terms-link-container">
+                <button
+                  className="sc-link-btn"
+                  onClick={() => setIsTermsModalOpen(true)}
+                >
+                  View Terms & Conditions
+                </button>
+              </div>
             </div>
             <div className="sc-image-block"></div>
           </div>
@@ -258,6 +268,10 @@ function App() {
       <BookingModal
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
+      />
+      <TermsModal
+        isOpen={isTermsModalOpen}
+        onClose={() => setIsTermsModalOpen(false)}
       />
     </div>
   )
