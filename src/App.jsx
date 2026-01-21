@@ -13,12 +13,14 @@ import {
 } from 'react-icons/fa'
 import FeaturedProducts from './FeaturedProducts'
 import Testimonials from './Testimonials'
+import BookingModal from './BookingModal'
 import logoImg from './assets/south-chow-img.png'
 import chefPeeImg from './assets/chef-pee-img.jpg'
 
 function App() {
   const [showBackToTop, setShowBackToTop] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -196,7 +198,12 @@ function App() {
                 "Rent a Chef" service brings professional culinary talent
                 directly to your kitchen to prepare exquisite a la carte menus.
               </p>
-              <button className="btn-primary">Book Now</button>
+              <button
+                className="btn-primary"
+                onClick={() => setIsBookingModalOpen(true)}
+              >
+                Book Now
+              </button>
             </div>
             <div className="sc-image-block"></div>
           </div>
@@ -248,6 +255,10 @@ function App() {
           &#8679;
         </button>
       )}
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+      />
     </div>
   )
 }
