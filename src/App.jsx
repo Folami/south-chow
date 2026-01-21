@@ -56,8 +56,30 @@ function App() {
   }
 
   const addToCart = (product) => {
-    setCartItems([...cartItems, product])
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find(
+        (item) => item.title === product.title,
+      )
+      if (existingItem) {
+        return prevItems.map((item) =>
+          item.title === product.title
+            ? { ...item, quantity: item.quantity + 1 }
+            : item,
+        )
+      }
+      return [...prevItems, { ...product, quantity: 1 }]
+    })
     setIsCartOpen(true)
+  }
+
+  const updateQuantity = (index, delta) => {
+    setCartItems((prevItems) =>
+      prevItems.map((item, i) =>
+        i === index
+          ? { ...item, quantity: Math.max(1, item.quantity + delta) }
+          : item,
+      ),
+    )
   }
 
   const removeFromCart = (index) => {
@@ -155,6 +177,7 @@ function App() {
         cartItems={cartItems}
         removeFromCart={removeFromCart}
         clearCart={clearCart}
+        updateQuantity={updateQuantity}
       />
     </div>
   )

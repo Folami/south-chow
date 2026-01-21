@@ -790,6 +790,22 @@ button,
   font-size: 0.9rem;
 }
 
+.sc-payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.sc-payment-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+}
+
 /* Terms Modal & Link */
 .sc-terms-link-container {
   margin-top: 1rem;

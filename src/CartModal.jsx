@@ -7,6 +7,7 @@ const CartModal = ({
   cartItems,
   removeFromCart,
   clearCart,
+  updateQuantity,
 }) => {
   const [step, setStep] = useState('cart') // 'cart', 'checkout', 'success'
   const [formData, setFormData] = useState({
@@ -14,11 +15,15 @@ const CartModal = ({
     email: '',
     address: '',
     phone: '',
+    paymentMethod: 'card',
   })
 
   if (!isOpen) return null
 
-  const total = cartItems.reduce((sum, item) => sum + item.price, 0)
+  const total = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  )
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -60,6 +65,15 @@ const CartModal = ({
                       <div className="sc-cart-item-info">
                         <h4>{item.title}</h4>
                         <span>${item.price.toFixed(2)}</span>
+                      </div>
+                      <div className="sc-cart-quantity-controls">
+                        <button onClick={() => updateQuantity(index, -1)}>
+                          -
+                        </button>
+                        <span>{item.quantity}</span>
+                        <button onClick={() => updateQuantity(index, 1)}>
+                          +
+                        </button>
                       </div>
                       <button
                         className="sc-cart-remove-btn"
@@ -135,6 +149,41 @@ const CartModal = ({
                   onChange={handleInputChange}
                   required
                 ></textarea>
+              </div>
+              <div className="sc-form-group">
+                <label>Payment Method</label>
+                <div className="sc-payment-methods">
+                  <label className="sc-payment-option">
+                    <input
+                      type="radio"
+                      name="paymentMethod"
+                      value="card"
+                      checked={formData.paymentMethod === 'card'}
+                      onChange={handleInputChange}
+                    />
+                    <span>Credit/Debit Card</span>
+                  </label>
+                  <label className="sc-payment-option">
+                    <input
+                      type="radio"
+                      name="paymentMethod"
+                      value="transfer"
+                      checked={formData.paymentMethod === 'transfer'}
+                      onChange={handleInputChange}
+                    />
+                    <span>Bank Transfer</span>
+                  </label>
+                  <label className="sc-payment-option">
+                    <input
+                      type="radio"
+                      name="paymentMethod"
+                      value="delivery"
+                      checked={formData.paymentMethod === 'delivery'}
+                      onChange={handleInputChange}
+                    />
+                    <span>Pay on Delivery</span>
+                  </label>
+                </div>
               </div>
               <button type="submit" className="btn-primary">
                 Place Order
