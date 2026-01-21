@@ -2,26 +2,26 @@ import React, { useState, useEffect } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
 
 // Styles
-import './styles/global.css'
+import './styles/LandingPage.css'
 
 // Layout Components
-import Navbar from './components/layout/Navbar/Navbar'
-import Footer from './components/layout/Footer/Footer'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 // Section Components
-import Hero from './components/sections/Hero/Hero'
-import About from './components/sections/About/About'
-import PackagedMeals from './components/sections/PackagedMeals/PackagedMeals'
-import FeaturedProducts from './components/sections/FeaturedProducts/FeaturedProducts'
-import RentAChef from './components/sections/RentAChef/RentAChef'
-import Testimonials from './components/sections/Testimonials/Testimonials'
-import Gallery from './components/sections/Gallery/Gallery'
-import Contact from './components/sections/Contact/Contact'
+import Hero from './components/sections/Hero'
+import About from './components/sections/About'
+import PackagedMeals from './components/sections/PackagedMeals'
+import FeaturedProducts from './components/sections/FeaturedProducts'
+import RentAChef from './components/sections/RentAChef'
+import Testimonials from './components/sections/Testimonials'
+import Gallery from './components/sections/Gallery'
+import Contact from './components/sections/Contact'
 
 // Modal Components
-import BookingModal from './components/modals/BookingModal/BookingModal'
-import TermsModal from './components/modals/TermsModal/TermsModal'
-import CartModal from './components/modals/CartModal/CartModal'
+import BookingModal from './components/modals/BookingModal'
+import TermsModal from './components/modals/TermsModal'
+import CartModal from './components/modals/CartModal'
 
 // Assets
 import logoImg from './assets/south-chow-img.png'
