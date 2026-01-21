@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './LandingPage.css'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import MealCard from './MealCard'
 import {
   FaFacebook,
@@ -35,6 +38,18 @@ function App() {
       top: 0,
       behavior: 'smooth',
     })
+  }
+
+  const heroSettings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    arrows: false,
   }
 
   return (
@@ -80,15 +95,42 @@ function App() {
         </div>
       </nav>
 
-      <section id="home" className="sc-hero">
-        <div className="sc-hero-overlay">
-          <h1>CULINARY EXCELLENCE</h1>
-          <p>Experience restaurant quality in the comfort of your home.</p>
-          <div className="sc-hero-btns">
-            <button className="btn-primary">Order Meals</button>
-            <button className="btn-secondary">Book Chef Pee</button>
+      <section id="home" className="sc-hero-section">
+        <Slider {...heroSettings} className="sc-hero-slider">
+          <div className="sc-hero-slide sc-hero-slide-1">
+            <div className="sc-hero-overlay">
+              <h1>CULINARY EXCELLENCE</h1>
+              <p>Experience restaurant quality in the comfort of your home.</p>
+              <div className="sc-hero-btns">
+                <a href="#chef" className="btn-secondary">
+                  Book Chef Pee
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+          <div className="sc-hero-slide sc-hero-slide-2">
+            <div className="sc-hero-overlay">
+              <h1>A LA CARTE DINING</h1>
+              <p>Exquisite menus tailored for your exclusive events.</p>
+              <div className="sc-hero-btns">
+                <a href="#chef" className="btn-primary">
+                  Order a La Carte
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="sc-hero-slide sc-hero-slide-3">
+            <div className="sc-hero-overlay">
+              <h1>GOURMET PACKAGED MEALS</h1>
+              <p>Ready to eat or cook delicacies delivered to you.</p>
+              <div className="sc-hero-btns">
+                <a href="#packaged" className="btn-primary">
+                  Order Packaged Meals
+                </a>
+              </div>
+            </div>
+          </div>
+        </Slider>
       </section>
 
       <section id="about" className="sc-section sc-light">

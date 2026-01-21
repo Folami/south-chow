@@ -39,11 +39,11 @@ body {
 }
 
 .sc-logo {
-  height: 90px;
-  width: 90px;
+  height: 60px;
+  width: auto;
   border: 2px solid var(--accent-color);
-  border-radius: 50%;
-  padding: 2px;
+  border-radius: 4px;
+  padding: 5px;
 }
 
 .sc-nav-links a {
@@ -123,29 +123,45 @@ body {
 }
 
 /* Hero */
-.sc-hero {
+.sc-hero-section {
   width: 100%;
   height: 100vh;
   background-color: #333;
-  /* Dark overlay + Image */
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  overflow: hidden;
+}
+
+.sc-hero-slide {
+  width: 100%;
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--text-light);
+  position: relative;
+}
+
+.sc-hero-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .sc-hero-overlay {
+  position: relative;
+  z-index: 2;
   max-width: 800px;
   padding: 2rem;
 }
 
-.sc-hero h1 {
+.sc-hero-overlay h1 {
   font-family: var(--font-heading);
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -161,7 +177,7 @@ body {
     0 0 35px var(--accent-color);
 }
 
-.sc-hero p {
+.sc-hero-overlay p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   font-style: italic;
@@ -171,6 +187,34 @@ body {
   display: flex;
   gap: 1rem;
   justify-content: center;
+}
+
+.sc-hero-slide-1 {
+  background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+}
+
+.sc-hero-slide-2 {
+  background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+}
+
+.sc-hero-slide-3 {
+  background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+}
+
+/* Hero Dots */
+.sc-hero-slider .slick-dots {
+  bottom: 30px;
+}
+
+.sc-hero-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.sc-hero-slider .slick-dots li.slick-active button:before {
+  color: var(--accent-color);
+  opacity: 1;
 }
 
 /* Buttons */
@@ -185,6 +229,8 @@ button,
   letter-spacing: 1px;
   font-size: 0.9rem;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary {
@@ -561,7 +607,7 @@ button,
     padding: 0;
   }
 
-  .sc-hero h1 {
+  .sc-hero-overlay h1 {
     font-size: 2.5rem;
     text-shadow:
       0 0 5px var(--accent-color),
