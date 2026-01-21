@@ -12,6 +12,16 @@ const Hero = ({ heroSettings }) => {
       <Slider {...heroSettings} className="sc-hero-slider">
         <div className="sc-hero-slide sc-hero-slide-1">
           <div className="sc-hero-overlay">
+            <div className="sc-hero-brand-container">
+              <div className="sc-brand-main">
+                <span className="sc-text-south">South</span>
+                <span className="sc-text-chow">Chow</span>
+              </div>
+              <div className="sc-brand-sub">
+                <span className="sc-text-by">by</span>
+                <span className="sc-text-ace">ACE</span>
+              </div>
+            </div>
             <h1>CULINARY EXCELLENCE</h1>
             <p>Experience restaurant quality in the comfort of your home.</p>
             <div className="sc-hero-btns">
@@ -23,6 +33,16 @@ const Hero = ({ heroSettings }) => {
         </div>
         <div className="sc-hero-slide sc-hero-slide-2">
           <div className="sc-hero-overlay">
+            <div className="sc-hero-brand-container">
+              <div className="sc-brand-main">
+                <span className="sc-text-south">South</span>
+                <span className="sc-text-chow">Chow</span>
+              </div>
+              <div className="sc-brand-sub">
+                <span className="sc-text-by">by</span>
+                <span className="sc-text-ace">ACE</span>
+              </div>
+            </div>
             <h1>A LA CARTE DINING</h1>
             <p>Exquisite menus tailored for your exclusive events.</p>
             <div className="sc-hero-btns">
@@ -34,6 +54,16 @@ const Hero = ({ heroSettings }) => {
         </div>
         <div className="sc-hero-slide sc-hero-slide-3">
           <div className="sc-hero-overlay">
+            <div className="sc-hero-brand-container">
+              <div className="sc-brand-main">
+                <span className="sc-text-south">South</span>
+                <span className="sc-text-chow">Chow</span>
+              </div>
+              <div className="sc-brand-sub">
+                <span className="sc-text-by">by</span>
+                <span className="sc-text-ace">ACE</span>
+              </div>
+            </div>
             <h1>GOURMET PACKAGED MEALS</h1>
             <p>Ready to eat or cook delicacies delivered to you.</p>
             <div className="sc-hero-btns">
