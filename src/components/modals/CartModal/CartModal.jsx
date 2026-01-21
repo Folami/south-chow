@@ -22,7 +22,7 @@ const CartModal = ({
   if (!isOpen) return null
 
   const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + parseFloat(item.price) * item.quantity,
     0,
   )
 
@@ -42,7 +42,7 @@ const CartModal = ({
 
   const resetModal = () => {
     setStep('cart')
-    setFormData({ name: '', email: '', address: '', phone: '' })
+    setFormData({ name: '', email: '', address: '', phone: '', paymentMethod: 'card' })
     onClose()
   }
 
@@ -65,7 +65,7 @@ const CartModal = ({
                     <div key={index} className="sc-cart-item">
                       <div className="sc-cart-item-info">
                         <h4>{item.title}</h4>
-                        <span>${item.price.toFixed(2)}</span>
+                        <span>£{parseFloat(item.price).toFixed(2)}</span>
                       </div>
                       <div className="sc-cart-quantity-controls">
                         <button onClick={() => updateQuantity(index, -1)}>
@@ -86,7 +86,7 @@ const CartModal = ({
                   ))}
                 </div>
                 <div className="sc-cart-total">
-                  <h3>Total: ${total.toFixed(2)}</h3>
+                  <h3>Total: £{total.toFixed(2)}</h3>
                   <button
                     className="btn-primary sc-checkout-btn"
                     onClick={() => setStep('checkout')}
@@ -108,7 +108,7 @@ const CartModal = ({
               <h2>Checkout</h2>
             </div>
             <p>
-              Total Amount: <strong>${total.toFixed(2)}</strong>
+              Total Amount: <strong>£{total.toFixed(2)}</strong>
             </p>
             <form className="sc-booking-form" onSubmit={handleSubmit}>
               <div className="sc-form-group">
