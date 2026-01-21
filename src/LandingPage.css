@@ -619,8 +619,11 @@ button,
   }
 
   .sc-image-block {
-    width: 100%;
-    height: 300px;
+    width: 100% !important;
+    height: 350px !important;
+    flex-shrink: 0;
+    margin-top: 2rem;
+    display: block !important;
   }
 
   /* Adjust carousel padding on mobile */
