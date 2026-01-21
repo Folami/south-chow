@@ -1,5 +1,6 @@
 import React from 'react'
-import MealCard from '../ui/MealCard'
+import './PackagedMeals.css'
+import MealCard from '../../ui/MealCard/MealCard'
 
 const PackagedMeals = ({ addToCart }) => {
   return (

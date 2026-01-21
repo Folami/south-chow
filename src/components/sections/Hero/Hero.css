@@ -1,0 +1,103 @@
+/* Hero Style */
+.sc-hero-section {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.sc-hero-slide {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-light);
+  position: relative;
+}
+
+.sc-hero-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.sc-hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.sc-hero-overlay h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow:
+    0 0 5px var(--accent-color),
+    0 0 10px var(--accent-color),
+    0 0 15px var(--accent-color),
+    0 0 20px var(--accent-color),
+    0 0 25px var(--accent-color),
+    0 0 30px var(--accent-color),
+    0 0 35px var(--accent-color);
+}
+
+.sc-hero-overlay p {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.sc-hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.sc-hero-slide-1 {
+  background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+}
+
+.sc-hero-slide-2 {
+  background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+}
+
+.sc-hero-slide-3 {
+  background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+}
+
+.sc-hero-slider .slick-dots {
+  bottom: 30px;
+}
+
+.sc-hero-slider .slick-dots li button:before {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.sc-hero-slider .slick-dots li.slick-active button:before {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .sc-hero-overlay h1 {
+    font-size: 2.5rem;
+    text-shadow:
+      0 0 5px var(--accent-color),
+      0 0 10px var(--accent-color);
+  }
+}

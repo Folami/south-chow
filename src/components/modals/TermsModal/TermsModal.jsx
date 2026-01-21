@@ -1,4 +1,5 @@
 import React from 'react'
+import './TermsModal.css'
 import { FaTimes } from 'react-icons/fa'
 
 const TermsModal = ({ isOpen, onClose }) => {

@@ -1,0 +1,111 @@
+/* Modal Base Style */
+.sc-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.sc-modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease;
+  text-align: center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sc-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-dark);
+  transition: color 0.3s;
+}
+
+.sc-modal-close:hover {
+  color: var(--accent-color);
+}
+
+.sc-modal-content h2 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.sc-modal-content p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+/* Booking specific */
+.sc-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sc-form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.sc-form-group label {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-weight: bold;
+}
+
+.sc-form-group input,
+.sc-form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.sc-form-group input:focus,
+.sc-form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.sc-form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+}

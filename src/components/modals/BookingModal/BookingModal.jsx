@@ -1,4 +1,5 @@
 import React from 'react'
+import './BookingModal.css'
 import { FaTimes } from 'react-icons/fa'
 
 const BookingModal = ({ isOpen, onClose }) => {

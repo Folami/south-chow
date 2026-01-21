@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --primary-color: #1a1a1a;
+  --accent-color: #c5a059;
+  --text-light: #f4f4f4;
+  --text-dark: #333333;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #fff;
+  letter-spacing: 0.2px;
+}
+
+.sc-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Base Section Styling */
+.sc-section {
+  padding: 8rem 5%;
+  width: 100%;
+}
+
+.sc-content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sc-section h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+.sc-subtitle {
+  color: var(--accent-color);
+  font-family: var(--font-heading);
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.sc-dark {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+/* Global Buttons */
+button,
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #b08d48;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}

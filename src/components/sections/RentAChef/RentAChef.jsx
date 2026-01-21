@@ -1,4 +1,5 @@
 import React from 'react'
+import './RentAChef.css'
 
 const RentAChef = ({ setIsBookingModalOpen, setIsTermsModalOpen }) => {
   return (

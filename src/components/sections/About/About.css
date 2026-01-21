@@ -1,0 +1,44 @@
+/* About Section Style */
+.sc-split-layout {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.sc-text-block {
+  flex: 1;
+}
+
+.sc-text-block p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.sc-image-block {
+  flex: 1;
+  height: 400px;
+  background-color: #444;
+  background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.sc-about-img {
+  background-image: url('https://images.unsplash.com/photo-1583394293214-28ded15ee548?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+}
+
+@media (max-width: 768px) {
+  .sc-split-layout {
+    flex-direction: column;
+  }
+
+  .sc-image-block {
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+    display: block;
+    margin-top: 2rem;
+  }
+}

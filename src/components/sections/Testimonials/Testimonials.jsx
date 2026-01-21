@@ -1,4 +1,5 @@
 import React from 'react'
+import './Testimonials.css'
 import Slider from 'react-slick'
 
 // Import slick-carousel styles
@@ -9,12 +10,11 @@ const Testimonials = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    fade: true,
     arrows: false,
   }
 

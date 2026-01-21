@@ -1,0 +1,21 @@
+/* FeaturedProducts Style */
+.sc-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.sc-img-featured-1 {
+  background-image: url('https://images.unsplash.com/photo-1563342192-513194147873?auto=format&fit=crop&w=800&q=80');
+}
+.sc-img-featured-2 {
+  background-image: url('https://images.unsplash.com/photo-1604329263239-aa8ce2742086?auto=format&fit=crop&w=800&q=80');
+}
+.sc-img-featured-3 {
+  background-image: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=800&q=80');
+}
+.sc-img-featured-4 {
+  background-image: url('https://images.unsplash.com/photo-1625944230942-905dc6f659c6?auto=format&fit=crop&w=800&q=80');
+}

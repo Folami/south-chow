@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './CartModal.css'
 import { FaTimes, FaTrash, FaArrowLeft } from 'react-icons/fa'
 
 const CartModal = ({
